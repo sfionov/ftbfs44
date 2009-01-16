@@ -1,0 +1,69 @@
+diff -ruN amarok-2.0.1.1.old/src/metadata/audible/audibleproperties.cpp amarok-2.0.1.1/src/metadata/audible/audibleproperties.cpp
+--- amarok-2.0.1.1.old/src/metadata/audible/audibleproperties.cpp	2009-01-17 00:16:52.000000000 +0300
++++ amarok-2.0.1.1/src/metadata/audible/audibleproperties.cpp	2009-01-17 00:18:20.788047893 +0300
+@@ -31,6 +31,8 @@
+ 
+ #include <netinet/in.h> // ntohl
+ 
++#include <cstdio>
++
+ using namespace TagLib;
+ 
+ 
+diff -ruN amarok-2.0.1.1.old/src/metadata/audible/audibletag.cpp amarok-2.0.1.1/src/metadata/audible/audibletag.cpp
+--- amarok-2.0.1.1.old/src/metadata/audible/audibletag.cpp	2009-01-17 00:16:52.000000000 +0300
++++ amarok-2.0.1.1/src/metadata/audible/audibletag.cpp	2009-01-17 00:18:20.792152327 +0300
+@@ -28,6 +28,7 @@
+ #include <tag.h>
+ #include <string.h>
+ #include <stdlib.h>
++#include <stdio.h>
+ 
+ #include <netinet/in.h> // ntohl
+ 
+diff -ruN amarok-2.0.1.1.old/src/metadata/audible/taglib_audiblefile.cpp amarok-2.0.1.1/src/metadata/audible/taglib_audiblefile.cpp
+--- amarok-2.0.1.1.old/src/metadata/audible/taglib_audiblefile.cpp	2009-01-17 00:16:52.000000000 +0300
++++ amarok-2.0.1.1/src/metadata/audible/taglib_audiblefile.cpp	2009-01-17 00:18:20.792152327 +0300
+@@ -29,6 +29,7 @@
+ #include "../tfile_helper.h"
+ #include <audioproperties.h>
+ #include <string.h>
++#include <stdio.h>
+ 
+ namespace TagLib {
+ ////////////////////////////////////////////////////////////////////////////////
+diff -ruN amarok-2.0.1.1.old/src/metadata/tfile_helper.h amarok-2.0.1.1/src/metadata/tfile_helper.h
+--- amarok-2.0.1.1.old/src/metadata/tfile_helper.h	2009-01-17 00:16:52.000000000 +0300
++++ amarok-2.0.1.1/src/metadata/tfile_helper.h	2009-01-17 00:18:20.792152327 +0300
+@@ -27,6 +27,8 @@
+ 
+ #include <tfile.h>
+ 
++#include <cstdio>
++
+ // need to be able to deal with either the straight forward char version
+ // or a char/wchar hybrid version of the filename
+ #ifdef COMPLEX_TAGLIB_FILENAME
+diff -ruN amarok-2.0.1.1.old/src/scriptengine/generator/generator/parser/rpp/pp-engine-bits.h amarok-2.0.1.1/src/scriptengine/generator/generator/parser/rpp/pp-engine-bits.h
+--- amarok-2.0.1.1.old/src/scriptengine/generator/generator/parser/rpp/pp-engine-bits.h	2009-01-17 00:16:52.000000000 +0300
++++ amarok-2.0.1.1/src/scriptengine/generator/generator/parser/rpp/pp-engine-bits.h	2009-01-17 00:18:20.792152327 +0300
+@@ -15,6 +15,8 @@
+ #ifndef PP_ENGINE_BITS_H
+ #define PP_ENGINE_BITS_H
+ 
++#include <cstdio>
++
+ namespace rpp {
+ 
+ inline std::string pp::fix_file_path(std::string const &filename) const
+diff -ruN amarok-2.0.1.1.old/src/scriptengine/generator/generator/parser/rpp/pp.h amarok-2.0.1.1/src/scriptengine/generator/generator/parser/rpp/pp.h
+--- amarok-2.0.1.1.old/src/scriptengine/generator/generator/parser/rpp/pp.h	2009-01-06 15:50:11.000000000 +0300
++++ amarok-2.0.1.1/src/scriptengine/generator/generator/parser/rpp/pp.h	2009-01-17 00:17:55.334363292 +0300
+@@ -28,6 +28,7 @@
+ #include <iostream>
+ #include <cassert>
+ #include <cctype>
++#include <cstdio>
+ 
+ #include <fcntl.h>
+ 
