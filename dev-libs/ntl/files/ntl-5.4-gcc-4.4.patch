@@ -1,0 +1,19 @@
+diff -ruN ntl-5.4.old/include/NTL/tools.h ntl-5.4/include/NTL/tools.h
+--- ntl-5.4.old/include/NTL/tools.h	2005-03-25 16:58:45.000000000 +0300
++++ ntl-5.4/include/NTL/tools.h	2009-01-17 03:30:23.356274540 +0300
+@@ -9,6 +9,7 @@
+ // new header files
+ 
+ #include <cstdlib>
++#include <cstdio>
+ #include <cmath>
+ #include <iostream>
+ 
+@@ -16,6 +17,7 @@
+ 
+ // old header files
+ 
++#include <stdio.h>
+ #include <stdlib.h>
+ #include <math.h>
+ #include <iostream.h>
